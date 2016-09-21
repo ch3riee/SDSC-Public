@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#SBATCH --job-name="h5DB"
+#SBATCH --output="h5DB.%j.%N.out"
+#SBATCH --nodes 1
+#SBATCH --ntasks-per-node 24 
+#SBATCH -t 1:30:00
+#SBATCH --mail-type ALL
+#SBATCH --mail-user sadatnazrul@gmail.com
+#SBATCH -A ddp260
+
+
+python data.py /oasis/projects/nsf/ddp260/tcooper/xsede_stats/comet_pickles/2015-11-16 &
+python data.py /oasis/projects/nsf/ddp260/tcooper/xsede_stats/comet_pickles/2015-11-17 &
+python data.py /oasis/projects/nsf/ddp260/tcooper/xsede_stats/comet_pickles/2015-11-18 &
+python data.py /oasis/projects/nsf/ddp260/tcooper/xsede_stats/comet_pickles/2015-11-19 &
+python data.py /oasis/projects/nsf/ddp260/tcooper/xsede_stats/comet_pickles/2015-11-20 &
+python data.py /oasis/projects/nsf/ddp260/tcooper/xsede_stats/comet_pickles/2015-11-21 &
+python data.py /oasis/projects/nsf/ddp260/tcooper/xsede_stats/comet_pickles/2015-11-22 &
+python data.py /oasis/projects/nsf/ddp260/tcooper/xsede_stats/comet_pickles/2015-11-23 &
+python data.py /oasis/projects/nsf/ddp260/tcooper/xsede_stats/comet_pickles/2015-11-24 &
+python data.py /oasis/projects/nsf/ddp260/tcooper/xsede_stats/comet_pickles/2015-11-25 &
+python data.py /oasis/projects/nsf/ddp260/tcooper/xsede_stats/comet_pickles/2015-11-26 &
+python data.py /oasis/projects/nsf/ddp260/tcooper/xsede_stats/comet_pickles/2015-11-27 &
+python data.py /oasis/projects/nsf/ddp260/tcooper/xsede_stats/comet_pickles/2015-11-28 &
+python data.py /oasis/projects/nsf/ddp260/tcooper/xsede_stats/comet_pickles/2015-11-29 &
+python data.py /oasis/projects/nsf/ddp260/tcooper/xsede_stats/comet_pickles/2015-11-30 &
+
+wait
